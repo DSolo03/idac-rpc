@@ -3,6 +3,7 @@ build/
 bin/
 obj/
 *.dll
+*.bat
 *.exe
 *.pdb
 
