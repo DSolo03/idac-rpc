@@ -1,9 +1,9 @@
 import socket
 import os
 import time
-
 import pymem
 from pymem.process import inject_dll_from_path
+import sys
 
 import configparser
 
@@ -15,9 +15,11 @@ config = configparser.ConfigParser()
 if getattr(sys, 'frozen', False):
     application_path = os.path.dirname(sys.executable)
 else:
-    application_path = os.path.dirname(os.path.abspath(__file__))
+    application_path = os.getcwd()
 
 config_path = os.path.join(application_path, 'config.ini')
+
+config.read(config_path)
 
 DEFAULT_PORT = 5555
 DEFAULT_PROCESS = "GameProject-Win64-Shipping.exe"
