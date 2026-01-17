@@ -1,0 +1,1 @@
+g++ -shared -o idac-rpc.dll src\\cpp\\main.cpp -std=c++17 -m64 -static -luser32 -lgdi32 -lwsock32

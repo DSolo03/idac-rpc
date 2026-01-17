@@ -1,0 +1,17 @@
+# Compiler & Build Artifacts
+build/
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# PyInstaller
+dist/
+*.spec
+__pycache__/
+
+# Environments
+venv/
+.venv/
+.env
